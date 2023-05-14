@@ -79,6 +79,7 @@ class OrdersController < ApplicationController
       @order = Order.find(params[:id])
     end
 
+    
     # Only allow a list of trusted parameters through.
     def order_params
       params.require(:order).permit(:customer, :confirmation, :total, :fullfilled)
