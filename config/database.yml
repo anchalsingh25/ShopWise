@@ -50,6 +50,8 @@ test:
 #
 production:
   <<: *default
-  database: takeoutapp_production
-  username: takeoutapp
-  password: <%= ENV["TAKEOUTAPP_DATABASE_PASSWORD"] %>
+  url: <%= ENV["MYSQL_URL"] %>
+  database: <%= ENV["MYSQL_DB"] %>
+  username: <%= ENV["MYSQL_USERNAME"] %>
+  password: <%= ENV["MYSQL_PASSWORD"] %>
+  adapter: mysql2
